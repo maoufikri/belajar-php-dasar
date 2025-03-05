@@ -20,3 +20,15 @@ $i = 0;
 // }
 // }
 
+$ukuran = 7;
+
+for($i =1; $i <= $ukuran; $i++) {
+    for($o =1; $o <= $ukuran; $o++) {
+        if ($o == $i || $o == ($ukuran - $i)) {
+            echo '*';
+} else {
+    echo ' ';
+    }
+}
+    echo "\n";
+}
