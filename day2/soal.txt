@@ -1,0 +1,54 @@
+soal 1
+1.⁠ ⁠Buatlah fungsi yang menerima beberapa digit dalam angka bulat dan memberikan output jumlah dari total setiap digitnya.  
+   Contoh:  
+   ⁠ 172638781627386123 ⁠ = ⁠ 1 + 7 + 2 + 6 + ... = 000 ⁠
+
+ 2.⁠ ⁠Buatlah fungsi yang menerima string dan menghitung jumlah karakter yang sama.
+
+ 3.⁠ ⁠Buatlah fungsi yang menerima array dan memberikan hasil rapi dari setiap elemen array dengan susunan urutan angka.  
+   Contoh:  
+   Input: ⁠ (123, 124, "123") ⁠  
+   Output:  
+   
+⁠    1. 123
+   2. 124
+   3. "123"
+    ⁠
+
+ 4.⁠ ⁠Buat kumpulan data nama dalam array, kemudian buatlah fungsi yang menerima string untuk menambahkan karakter otomatis pada setiap elemen array.  
+   Contoh:  
+   
+⁠    Array = [Nama1, Nama2] | [10.000, 20.000]  
+   Array = [Nama1 PIT, Nama2 PIT] | [Rp.10.000, Rp.20.000]
+    ⁠
+
+ 5.⁠ ⁠Buatlah fungsi untuk memfilter pada array untuk string, dari karakter yang paling sedikit hingga terbanyak.
+
+ 6.⁠ ⁠Buatlah fungsi untuk memfilter pada array untuk integer, dari yang terkecil hingga terbesar.
+
+ 7.⁠ ⁠Buatlah fungsi untuk memfilter pada array untuk integer, menjadikan angka genap terdepan.
+
+ 8.⁠ ⁠Buatlah fungsi untuk memfilter pada array untuk integer, menjadikan angka ganjil terdepan.
+
+ 9.⁠ ⁠Buatlah fungsi untuk memfilter pada array untuk integer, menjadikan angka genap terdepan.  
+   (Catatan: Ini tampaknya sama dengan poin 7, mohon konfirmasi jika ada perbedaan.)
+
+10.⁠ ⁠Buatlah fungsi untuk memisahkan angka genap dan ganjil menjadi array yang berbeda.
+
+soal 2
+ESSAY 2 => 
+
+RESTORAN =>>>>>>>>>>>
+1.⁠ ⁠BUATLAH FUNCTION UNTUK TAMBAH LIST MENU MAKANAN 
+2.⁠ ⁠BUATLAH FUNCTION UNTUK SET HARGA PADA SETIAP MENU
+3.⁠ ⁠BUATLAH FUNCTION UNTUK MELIHAT SELURUH DAFTAR LIST  MENU + HARGA 
+4.⁠ ⁠BUATLAH FUNCTION UNTUK PILIH BEBERPA MENU KEMUDIAN MUNCULKAN TOTAL HARGA YANG DI PILIH DENGAN MENUNYA
+
+WAKTU =>>>>>>>>>>>>
+1.⁠ ⁠BUATLAH FUNCTION UNTUK CEK UMUR 
+2.⁠ ⁠BUATLAH FUNCTION UNTUK CEK BERAPA HARI LAGI DIA ULTAH
+3.⁠ ⁠BUTALAH FUNCTION UNTUK CEK WAKTU NEGARA LAIN
+
+MONEY =>>>>>>>>>>>
+1.⁠ ⁠BUATLAH FUNCTION UNTUK CEK HARGA SETELAH DI DISKON
+2.⁠ ⁠BUATLAH FUNCTION UNTUK CONVERT NILAI MATA UANG KE NEGARA LAIN
