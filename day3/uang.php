@@ -4,6 +4,7 @@ function cekDiskon($harga ,$diskon) {
     if (($diskon < 0) || ($diskon > 100)) {
         return "diskon harus dengan range 0-100% ";
 }
+
 $hasilDiskon = $harga - ($harga * $diskon / 100);
 return "Harga setelah diskon adalah : " . number_format($hasilDiskon, 0 , ',', '.') . "\n";
 }
