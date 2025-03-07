@@ -2,12 +2,12 @@
 
 // 1
 function jumlahDigit($angka) {
-    $angka = strval($angka); // Ubah angka jadi string biar bisa dipecah per digit
+    $angka = strval($angka);
     $total = 0;
     $digits = [];
 
     for ($i = 0; $i < strlen($angka); $i++) {
-        $total += intval($angka[$i]); // Tambahin tiap digit ke total
+        $digits[] = $total += intval($angka[$i]); 
     }
 
     return $total;
@@ -16,6 +16,7 @@ function jumlahDigit($angka) {
 // Contoh penggunaan
 $angka = 12345;
 echo "Jumlah digit dari $angka adalah: " . jumlahDigit($angka);
+
 
 // 2
 function hitungKarakterSama($string) {
@@ -51,6 +52,32 @@ $arr2  = ["Bambang","Bambang","Bambang","Bambang","Bambang","Bambang"];
 formatArray($arr2,"Nama : "," Santri PIT");
 
 // 4
+function TambahKarakterPadaArray(array $array, string $tambahan, string $tipe = "teks") {
+    $hasil = [];
+
+    foreach ($array as $item) {
+        if ($tipe === "angka") {
+            $hasil[] = "Rp." . number_format($item, 0, ",", ".");
+        } else {
+            $hasil[] = $item . " " . $tambahan;
+        }
+    }
+
+    return $hasil;
+}
+
+// Data nama dan angka
+$nama = ["Nama1", "Nama2", "Nama3"];
+$harga = [10000, 20000, 30000];
+
+// Menambahkan karakter pada nama dan angka
+$namaBaru = TambahKarakterPadaArray($nama, "PIT");
+$hargaBaru = TambahKarakterPadaArray($harga, "", "angka");
+
+// Cetak hasil
+print_r($namaBaru);
+print_r($hargaBaru);
+
 // 5
 function urutkanStringDariPendekKePanjang(array $arr) {
     usort($arr, fn($a, $b) => strlen($a) - strlen($b));
@@ -77,26 +104,25 @@ print_r($hasil); // Output: [1, 2, 5, 50, 100]
 
 // 7
 function FilterArrayMendahulukanGenap(array $arrays) {
-    $even = [];
-    $odd = [];
+    $ganjil = [];
+    $genap = [];
 
-    foreach ($arrays as $array) {
-        if (is_numeric($array)) {
-            if ($array % 2 === 0) {
-                $even[] = $array;
+    foreach ($arrays as $arr) {
+        if (is_numeric($arr)) { // Hanya memproses angka
+            if ($arr % 2 == 0) {
+                $genap[] = $arr;
             } else {
-                $odd[] = $array;
+                $ganjil[] = $arr;
             }
-        } else {
-            continue;
         }
     }
 
+    sort($genap);
+    sort($ganjil);
 
-    return array_merge($even, $odd);
+    return array_merge($genap, $ganjil);
 }
 
-// $angka = [4, 2, 4, 3, 4, 5, 7, 9];
 $angka = [9, "a", "b", "c", 8, 7, 3, 2, 1, 10, 12];
 
 print_r(FilterArrayMendahulukanGenap($angka));
@@ -113,12 +139,36 @@ $hasil = angkaGanjilDulu($angkaArray);
 print_r($hasil); // Output: [3, 1, 9, 8, 4, 6]
 
 // 9
+function FilterGenapDahulu(array $array) {
+    $ganjil = [];
+    $genap = [];
+
+    foreach ($array as $arr) {
+        if (is_numeric($arr)) { // Hanya memproses angka
+            if ($arr % 2 == 0) {
+                $genap[] = $arr;
+            } else {
+                $ganjil[] = $arr;
+            }
+        }
+    }
+
+    sort($genap);
+    sort($ganjil);
+
+    return array_merge($genap, $ganjil);
+}
+
+$angka = [9, "a", "b", "c", 8, 7, 3, 2, 1, 10, 12];
+
+print_r(FilterGenapDahulu($angka));
+
 // 10
 function PisahArrayGenapGanjil(array $arr) {
     $arrGenap = [];
     $arrGanjil = [];
 
-    for($i = 0; $i <= count($arr); $i++) {
+    for($i = 0; $i < count($arr); $i++) {
     $valueOfArray = $arr[$i];
     if ($valueOfArray % 2 == 0) {
         $genap = $valueOfArray;
