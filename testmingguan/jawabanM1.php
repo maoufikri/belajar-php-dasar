@@ -2,124 +2,193 @@
 
 // 1
 
-function domba($domba) {
-    $present = 0;
-    $alpha = 0;
+// function domba($domba) {
+//     $present = 0;
+//     $alpha = 0;
     
-    foreach ($domba as $domb) {
-        if (is_bool($domb)) { 
-            if ($domb == true) {
-                $present++;
-            } else {
-                $alpha++;
-            }
-        }
-    }
-    return "present = $present, alpha = $alpha";
-}
+//     foreach ($domba as $domb) {
+//         if (is_bool($domb)) { 
+//             if ($domb == true) {
+//                 $present++;
+//             } else {
+//                 $alpha++;
+//             }
+//         }
+//     }
+//     return "present = $present, alpha = $alpha";
+// }
 
-$domba = [true, true, true, false, true, true, true, true , true, false, true, false,
-true, false, false, true , true, true, true, true , false, false, true, true, "a", 123];
-echo domba($domba) . "\n";
+// $domba1 = [123, 'kambing', false, true, null, 'domba', 456, true, false, 'true', 789, true, true];
+// $domba2 = [true, 'true', 'false', false, true, 'domba', null, false, true, 'kambing', 234];
+// $domba3 = [false, true, 'domba', 567, 'kambing', null, true, false, 'false', 890, 'true'];
+// $domba4 = ['domba', true, 'false', false, true, false, 231, 432, 'domba', null, true, true, true];
+// $domba5 = [true, false, 342, 'domba', true, true, true, true, true, false, true, null, null, 2, 'sapi', true, true];
+
+// echo domba($domba1) . "\n";
 
 // 2
-function multiple($angka) {
-    if ($angka % 3 == 0 || $angka % 7 == 0) {
-        return "true";
-    } else {
-        return "false";
-    }
-}
-echo multiple(8) . "\n";
+// $number1 = [3, 12, 43, 21, 90, 120, 1330];
+// $number2 = [321, 64, 3, 24, 80, 34, 60];
+// $number3 = [99, 89, 45, 21, 75, 23, 55];
+// $number4 = [40, 12, 41992, 21, 908493, 13420, 1330];
+
+// function multiple($angka) {
+//     foreach ($angka as $value) {
+//         if ($value % 3 == 0 || $value % 7 == 0) {
+//             echo "[" . $value . "]" . "true" . ",";
+//         } else 
+//         {
+//             echo "[" . $value . "]" . "false" . ",";
+//         }
+//     } 
+// }
+// echo multiple($number4) . "\n";
 
 // 3
-function century($tahun) {
-    return ceil($tahun / 100);
-}
+// $abad1 = [1000, 2309, 2341, 1001, 2022];
+// $abad2 = [210, 2031, 9201, 3209, 2432];
+// $abad3 = [909, 122, 3221, 1401, 2222];
+// $abad4 = [230, 2309, 2341, 12, 20022];
+// $abad5 = [100, 2, 43, 56, 9098];
 
-echo century(2102) . "\n";
+// function century($tahun) {
+//     foreach ($tahun as $value) {
+//         echo $value . " = " . ceil($value / 100) . "\n";
+//     }
+// }
 
-// 4
-function PisahArrayGenapGanjil(array $arr) {
-    $arrGenap = [];
-    $arrGanjil = [];
+// echo century($abad5) . "\n";
 
-    for($i = 0; $i < count($arr); $i++) {
-    $valueOfArray = $arr[$i];
-    if ($valueOfArray % 2 == 0) {
-        $genap = $valueOfArray;
-        $arrGenap[] = $genap;
-    } else {
-        $ganjil = $valueOfArray;
-        $arrGanjil[] = $ganjil;
-        }
-    }
+// // 4
+// $numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// $numbers2 = [23, 53532, 625265, 1230984, 102];
+// $numbers3 = [123, 234, 345, 456, 567, 678, 789, 890, 901, 1011];
+// $numbers4 = [4902,902, 32, 31, 78, 424];
+// $numbers5 = [8932, 971902, 2179879, 31378121321, 4327190];
 
-    $result = ["Genap" => $arrGenap, "Ganjil" => $arrGanjil];
-    return $result;
+// function PisahArrayGenapGanjil(array $arr) {
+//     $arrGenap = [];
+//     $arrGanjil = [];
 
-}
+//     for($i = 0; $i < count($arr); $i++) {
+//     $valueOfArray = $arr[$i];
+//     if ($valueOfArray % 2 == 0) {
+//         $genap = $valueOfArray;
+//         $arrGenap[] = $genap;
+//     } else {
+//         $ganjil = $valueOfArray;
+//         $arrGanjil[] = $ganjil;
+//         }
+//     }
 
-$data = [123,456,2347,234,67,1,2,5,7,8,9,89,3,2,6,5,9];
+//     $result = ["Genap" => $arrGenap, "Ganjil" => $arrGanjil];
+//     return $result;
 
-print_r(PisahArrayGenapGanjil($data));
+// }
+
+// print_r(PisahArrayGenapGanjil($numbers5));
 
 // 5
-function TambahKarakterPadaArray(array $array, string $tambahan, string $tipe = "teks") {
-    $hasil = [];
+// $add2 = [232000, 15000000000000, 'Frodo', 'Legolas', 'Sukardi', 2500, 'Hataru', 9320200];
+// $add3 = [20000, 'Aragorn','Legolas',320090, 'Naruto', 3000, 7500, 'Bambang'];
+// $add4 = ['Siti', 340023, 'Samwise', 'Boromir', 43000, 604000];
+// $add5 = ['Joko', 30000, 'Dwarf', 5000, 'Gwenn', 'Pippin', 2300, 2300,'Conan',920000000000000000000];
 
-    foreach ($array as $item) {
-        if ($tipe === "angka") {
-            $hasil[] = "Rp." . number_format($item, 0, ",", ".") . ",00-";
-        } else {
-            $hasil[] = $item . " " . $tambahan;
-        }
-    }
+// function TambahKarakterPadaArray(array $array, string $prefix = '', string $suffix = '') {
+//     foreach ($array as $index ) {
+//         if (is_numeric($index)) {
+//            echo "Rp." . $index .  ",00-" . "\n";
+//         } else if (is_string($index)) {
+//             echo "Pak " . $index  . " -kun" . "\n";
+//         }
+//     }
+// }
 
-    return $hasil;
-}
+// echo TambahKarakterPadaArray($add5);
 
-// Data nama dan angka
-$nama = ["Nama1", "Nama2", "Nama3"];
-$harga = [10000, 20000, 30000];
-
-// Menambahkan karakter pada nama dan angka
-$namaBaru = TambahKarakterPadaArray($nama, "-kun");
-$hargaBaru = TambahKarakterPadaArray($harga, "", "angka");
-
-// Cetak hasil
-print_r($namaBaru);
-print_r($hargaBaru);
 
 // 6 & 7
-$menuBudheNar = [
-    'nasi goreng' => 0, 
-    'mie ayam' => 0,
-    'bakso' => 0,
-    'sate ayam' => 0,
-    'sate kambing' => 0
+$menu = [
+    'makanan' => [
+        'ayam' => [
+            'ayam bakar',
+            'ayam goreng',
+            'ayam sambal',
+            'ayam kecap'
+        ],
+        'ikan' => [
+            'ikan bakar',
+            'ikan goreng',
+            'ikan sambal',
+            'ikan kecap'
+        ],
+        'sapi' => [
+            'sapi bakar',
+            'sapi goreng',
+            'sapi sambal',
+            'sapi kecap'
+        ],
+        'kambing' => [
+            'kambing bakar',
+            'kambing goreng',
+            'kambing sambal',
+            'kambing kecap'
+        ]
+        ],
+    "minuman" =>[
+        'es teh',
+        'es jeruk',
+        'es anggur',
+        "masirmas",
+        "teh sisri",
+        "es teh anget",
+        "soda gembira"
+    ]
 ];
 function tampilkanMenu($menu) {
     echo " Daftar Menu:" . "\n";
-    foreach ($menu as $nama => $harga) {
-        echo "- $nama : Rp. " . number_format($harga, 0, ",", ".") . "\n";
+    echo "Makanan:" . "\n";
+    foreach ($menu['makanan'] as $nama => $item) {
+        echo "menu: " ."$nama" . "\n";
+        foreach ($item as $item) {
+            echo "-" . "$item" . "\n"; 
+        }
+    echo "minuman:" . "\n";
+    foreach ($menu['minuman'] as $minuman) {
+        echo "-" . "$minuman" . "\n";
+            }
     }
+
 }
 
-function setHargaMenu(&$menu, string $nama, int $harga) {
-    if (isset($menu[$nama])) {
-        $menu[$nama] = $harga;
-        echo "Harga untuk '$nama' telah diatur menjadi Rp. " . number_format($harga, 0, ",", ".") . "\n";     
-    } else {
-        echo "Menu '$nama' tidak ada!" . "\n";
+function setHargaMenu(&$menu, $kategori, $nama, $harga, $jenis = '') {
+    // Jika kategori ada di dalam menu
+    if (isset($menu[$kategori])) {
+        // Jika kategori makanan (butuh jenis)
+        if (is_array($menu[$kategori]) && isset($menu[$kategori][$jenis])) {
+            if (in_array($nama, $menu[$kategori][$jenis])) {
+                $key = array_search($nama, $menu[$kategori][$jenis]);
+                $menu[$kategori][$jenis][$key] = ["nama" => $nama, "harga" => $harga];
+                echo "Harga untuk '$nama' telah diatur menjadi Rp. " . number_format($harga, 0, ",", ".") . "\n";
+                return;
+            }
+        }
+        // Jika kategori minuman (tanpa jenis)
+        elseif (in_array($nama, $menu[$kategori])) {
+            $key = array_search($nama, $menu[$kategori]);
+            $menu[$kategori][$key] = ["nama" => $nama, "harga" => $harga];
+            echo "Harga untuk '$nama' telah diatur menjadi Rp. " . number_format($harga, 0, ",", ".") . "\n";
+            return;
+        }
     }
-
+    
+    // Kalau nggak ketemu
+    echo "Menu '$nama' belum ditambahkan dalam kategori '$kategori'!\n";
 }
 
-setHargaMenu($menuBudheNar, 'nasi goreng', 15000);
-setHargaMenu($menuBudheNar, 'mie ayam', 8000);
-setHargaMenu($menuBudheNar, 'bakso', 8000);
-setHargaMenu($menuBudheNar, 'sate ayam', 10000);
-setHargaMenu($menuBudheNar, 'sate kambing', 13000);
-setHargaMenu($menuBudheNar, 'nissan', 13000);
-tampilkanMenu($menuBudheNar);
+ 
+
+setHargaMenu($menu, "minuman", 'teh sisri', 15000, '');
+
+// tampilkanMenu($menu);
+print_r($menu);
