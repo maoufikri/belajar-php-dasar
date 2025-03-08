@@ -37,7 +37,7 @@ function century($tahun) {
     return ceil($tahun / 100);
 }
 
-echo century(2002) . "\n";
+echo century(2102) . "\n";
 
 // 4
 function PisahArrayGenapGanjil(array $arr) {
