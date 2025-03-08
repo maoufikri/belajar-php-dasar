@@ -146,20 +146,34 @@ $menu = [
     ]
 ];
 function tampilkanMenu($menu) {
-    echo " Daftar Menu:" . "\n";
-    echo "Makanan:" . "\n";
-    foreach ($menu['makanan'] as $nama => $item) {
-        echo "menu: " ."$nama" . "\n";
-        foreach ($item as $item) {
-            echo "-" . "$item" . "\n"; 
-        }
-    echo "minuman:" . "\n";
-    foreach ($menu['minuman'] as $minuman) {
-        echo "-" . "$minuman" . "\n";
+    echo "===== Daftar Menu =====\n";
+
+    // Menampilkan makanan
+    echo "\nMakanan:\n";
+    foreach ($menu['makanan'] as $jenis => $daftar) {
+        echo "Kategori: $jenis\n";
+        foreach ($daftar as $item) {
+            if (is_array($item)) {
+                echo "- {$item['nama']} (Rp. " . number_format($item['harga'], 0, ",", ".") . ")\n";
+            } else {
+                echo "- $item\n";
             }
+        }
     }
 
+    // Menampilkan minuman
+    echo "\nMinuman:\n";
+    foreach ($menu['minuman'] as $minuman) {
+        if (is_array($minuman)) {
+            echo "- {$minuman['nama']} (Rp. " . number_format($minuman['harga'], 0, ",", ".") . ")\n";
+        } else {
+            echo "- $minuman\n";
+        }
+    }
+
+    echo "=======================\n";
 }
+
 
 function setHargaMenu(&$menu, $kategori, $nama, $harga, $jenis = '') {
     // Jika kategori ada di dalam menu
@@ -188,7 +202,8 @@ function setHargaMenu(&$menu, $kategori, $nama, $harga, $jenis = '') {
 
  
 
-setHargaMenu($menu, "minuman", 'teh sisri', 15000, '');
+// setHargaMenu($menu, "minuman", 'teh sisri', 15000, '');
 
-// tampilkanMenu($menu);
-print_r($menu);
+tampilkanMenu($menu);
+
+// print_r($menu);
