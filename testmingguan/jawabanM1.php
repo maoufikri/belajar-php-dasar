@@ -13,10 +13,12 @@ function domba($domba) {
             } else {
                 $alpha++;
             }
+               
+            }
         }
+        return "present = $present, alpha = $alpha";
     }
-    return "present = $present, alpha = $alpha";
-}
+
 
 $domba1 = [123, 'kambing', false, true, null, 'domba', 456, true, false, 'true', 789, true, true];
 $domba2 = [true, 'true', 'false', false, true, 'domba', null, false, true, 'kambing', 234];
@@ -36,8 +38,7 @@ function multiple($angka) {
     foreach ($angka as $value) {
         if ($value % 3 == 0 || $value % 7 == 0) {
             echo "[" . $value . "]" . "true" . ",";
-        } else 
-        {
+        } else {
             echo "[" . $value . "]" . "false" . ",";
         }
     } 
@@ -94,7 +95,7 @@ $add3 = [20000, 'Aragorn','Legolas',320090, 'Naruto', 3000, 7500, 'Bambang'];
 $add4 = ['Siti', 340023, 'Samwise', 'Boromir', 43000, 604000];
 $add5 = ['Joko', 30000, 'Dwarf', 5000, 'Gwenn', 'Pippin', 2300, 2300,'Conan',920000000000000000000];
 
-function TambahKarakterPadaArray(array $array, string $prefix = '', string $suffix = '') {
+function TambahKarakterPadaArray(array $array) {
     foreach ($array as $index ) {
         if (is_numeric($index)) {
            echo "Rp." . $index .  ",00-" . "\n";
@@ -104,10 +105,10 @@ function TambahKarakterPadaArray(array $array, string $prefix = '', string $suff
     }
 }
 
-echo TambahKarakterPadaArray($add5);
+TambahKarakterPadaArray($add5);
 
 
-// 6 & 7
+// // 6 & 7
 $menu = [
     'makanan' => [
         'ayam' => [
@@ -175,7 +176,7 @@ function tampilkanMenu($menu) {
 }
 
 
-function setHargaMenu(&$menu, $kategori, $nama, $harga, $jenis = '') {
+function setHargaMenu(&$menu, $kategori,$nama, $harga, $jenis = '') {
     // Jika kategori ada di dalam menu
     if (isset($menu[$kategori])) {
         // Jika kategori makanan (butuh jenis)
@@ -202,8 +203,8 @@ function setHargaMenu(&$menu, $kategori, $nama, $harga, $jenis = '') {
 
  
 
-// setHargaMenu($menu, "minuman", 'teh sisri', 15000, '');
+setHargaMenu($menu, "minuman", 'teh sisri', 15000, '');
+setHargaMenu($menu, "makanan", 'ayam bakar', 10000000, 'ayam');
 
 tampilkanMenu($menu);
 
-// print_r($menu);
