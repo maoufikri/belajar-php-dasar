@@ -15,7 +15,7 @@ class Person {
 
     function tampil() {
         echo "Halo nama saya " . $this->name . ",";
-        echo " Umur saya " . $this->age . " tahun, ";
+        echo " Umur saya " . $this->age . " tahun,";
         echo " Jenis kelamin saya " . $this->gender . ",";
         echo " Alamat saya " . $this->address . "\n";
     }
