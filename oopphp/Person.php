@@ -12,6 +12,10 @@ class Person {
         $this->gender = $gender;
         $this->address = $address;
     }
+    function __destruct() {
+        echo "Sekian perkenalan saya " . $this->name . "\n";
+    }
+
 
     function tampil() {
         echo "Halo nama saya " . $this->name . ",";
@@ -23,4 +27,6 @@ class Person {
 }
 
 $abdul = new Person("Abdul", 20, "Laki-laki", "Bandung");
+$Gaby = new Person("Gaby", 18, "Perempuan", "Manado");
 $abdul->tampil();
+$Gaby->tampil();
