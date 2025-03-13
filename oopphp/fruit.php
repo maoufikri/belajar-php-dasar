@@ -1,6 +1,6 @@
 <?php
 
-class fruit{
+class Fruit{
     public $name;
     protected $color;
     private $weight;
@@ -18,7 +18,7 @@ class fruit{
     }
 }
 
-$obj = new fruit();
+// $obj = new fruit();
 $obj->set_name('aku');
 // $obj->set_color('merah'); // error
 // $obj->set_weight('50'); // error
