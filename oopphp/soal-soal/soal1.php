@@ -36,7 +36,7 @@ abstract class Animal {
     }
     public function __destruct()
     {
-        echo  $this->name . " telah dihapus\n";
+        echo  $this->name . " Telah Gugur" . "\n";
     }
 }
 
@@ -45,7 +45,7 @@ class Cat extends Animal{
 
     public function makeSound()
     {
-        echo "Nyan...." . "\n";
+        echo "suaranya : " . "Nyan...." . "\n";
     }
     public function getInfo()
     {
@@ -60,7 +60,7 @@ class Dog extends Animal{
 
     public function makeSound()
     {
-        echo "Woof..." . "\n";
+        echo "suaranya : " ."Woof..." . "\n";
     }
     public function getInfo()
     {
