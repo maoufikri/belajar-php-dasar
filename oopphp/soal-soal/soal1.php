@@ -66,7 +66,7 @@ class Dog extends Animal{
     {
         echo "Nama: " . $this->name . "\n";
         echo "Umur: " . $this->age . "\n";
-        echo "Ras: " . $this->breed = "Golden Retriever" . "\n";
+        echo "Ras: " . $this->breed = "Shiba Inu" . "\n";
     }
 }
 
@@ -75,7 +75,17 @@ $neko->getInfo();
 $neko->makeSound();
 unset($neko);
 
+$neko1 = new Cat("kuro", 10);
+$neko1->getInfo();
+$neko1->makeSound();
+unset($neko1);
+
 $shiba = new Dog("Shiba", 3);
 $shiba->getInfo();
 $shiba->makeSound();
 unset($shiba);
+
+$shiba1 = new Dog("inu", 3);
+$shiba1->getInfo();
+$shiba1->makeSound();
+unset($shiba1);
