@@ -1,0 +1,10 @@
+1. Buat sebuah fungsi yang menerima dua parameter integer dan mengembalikan hasil
+    penjumlahannya.
+2. Buat fungsi yang menerima satu parameter string dan menampilkan hasilnya dengan awalan
+    "Hello, ".
+3. Buat fungsi rekursif untuk menghitung faktorial dari angka yang diberikan.
+4. Buat sebuah fungsi yang menerima dua parameter dan mengembalikan nilai tertinggi di
+    antara kedua angka tersebut.
+5. Buat fungsi yang menerima dua angka dan mengembalikan hasil pembagian keduanya.
+    Pastikan untuk menangani pembagian dengan nol (dividing by zero)
+6. Buatlah fungsi yang menerima string dan menghitung jumlah carachter yang sama

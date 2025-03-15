@@ -1,0 +1,15 @@
+Soal 1: Trait untuk Berjalan
+Buat sebuah trait bernama BisaBerjalan yang memiliki method berjalan(), yang
+mencetak "Saya bisa berjalan!".
+Kemudian, buat kelas Robot yang menggunakan trait ini, dan buat objeknya untuk memanggil
+method berjalan().
+📌Output yang diharapkan:
+Saya bisa berjalan!
+
+Soal 2: Trait dengan Beberapa Kelas
+Buat trait BisaTerbang yang memiliki method terbang().
+Buat kelas Burung dan kelas Pesawat, keduanya menggunakan trait BisaTerbang.
+Buat objek dari kedua kelas dan panggil method terbang().
+📌Output yang diharapkan:
+Burung: Saya bisa terbang tinggi!
+Pesawat: Saya bisa terbang tinggi!

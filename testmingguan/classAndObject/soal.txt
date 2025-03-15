@@ -1,0 +1,10 @@
+1. Buat sebuah class bernama Person dengan property name dan age. Buat objek dari class
+    tersebut dan tampilkan nilai property name.
+2. Buat class Car dengan method startEngine(), yang menampilkan "Engine Started" ketika
+    dipanggil.
+3. Buat class Rectangle dengan property width dan height, serta method calculateArea() yang
+    mengembalikan hasil luas (area) dari persegi panjang.
+4. Buat objek dari class Rectangle dan tampilkan hasil perhitungan area berdasarkan property
+    width dan height.
+5. Buat class Employee dengan method getSalary(). Tulis kode untuk menampilkan gaji dari
+    objek Employee.

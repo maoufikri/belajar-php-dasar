@@ -1,0 +1,16 @@
+Soal 1: Abstract Class Dasar
+Buat abstract class MakhlukHidup yang memiliki method abstract bernafas().
+Kemudian, buat kelas Manusia yang mewarisi MakhlukHidup dan mengimplementasi
+bernafas() dengan mencetak "Manusia bernafas dengan paru-paru.".
+📌Output yang diharapkan:
+Manusia bernafas dengan paru-paru.
+
+Soal 2: Abstract Class dengan Beberapa Kelas
+Buat abstract class AlatMusik dengan method abstract mainkan().
+Buat dua kelas yang mewarisi AlatMusik:
+• Gitar dengan method mainkan() yang mencetak "Memainkan gitar: jreng jreng!"
+• Piano dengan method mainkan() yang mencetak "Memainkan piano: ting ting!"
+Buat objek dari kedua kelas tersebut dan panggil method mainkan().
+📌Output yang diharapkan:
+Memainkan gitar: jreng jreng!
+Memainkan piano: ting ting!

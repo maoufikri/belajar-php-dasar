@@ -1,0 +1,3 @@
+1. Ubah variabel string yang berisi angka "123.45" menjadi integer, dan tampilkan hasilnya.
+2. Ubah variabel integer menjadi float. Kemudian, tampilkan hasilnya.
+3. Buat variabel bertipe array dan ubah menjadi tipe object, kemudian tampilkan hasilnya.

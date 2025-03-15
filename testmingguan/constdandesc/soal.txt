@@ -1,0 +1,8 @@
+1. Buat class dengan constructor yang menerima parameter name dan age, dan tampilkan nama
+    serta umur ketika objek diinisialisasi
+2. Buat class Book dengan constructor yang menerima parameter title dan author. Tampilkan
+    informasi buku saat objek dibuat.
+3. Buat class DatabaseConnection dengan destructor yang mencetak pesan "Koneksi ke
+    database ditutup" ketika objek dihancurkan.
+4. Buat class yang memiliki constructor untuk menerima nilai parameter, dan destructor yang
+    mencetak pesan ketika objek dihancurkan.

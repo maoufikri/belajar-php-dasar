@@ -1,0 +1,23 @@
+Soal 1: Menggunakan Interface
+Buat interface Bentuk dengan method hitungLuas().
+Kemudian, buat dua kelas yang mengimplementasi interface ini:
+• Kelas Persegi (memiliki property $sisi, method hitungLuas() mengembalikan
+luas sisi * sisi).
+• Kelas Segitiga (memiliki property $alas dan $tinggi, method hitungLuas()
+mengembalikan 0.5 * alas * tinggi).
+Buat objek dari kedua kelas tersebut dan tampilkan luasnya.
+📌Output yang diharapkan:
+Luas Persegi: 25
+Luas Segitiga: 15
+(Jika panjang sisi 5, alas 6, dan tinggi 5)
+
+Soal 2: Interface untuk Kendaraan
+Buat interface Kendaraan dengan method jalan().
+Kemudian, buat kelas Mobil dan kelas Sepeda yang mengimplementasi interface ini dengan
+mencetak:
+• "Mobil berjalan di jalan raya."
+• "Sepeda berjalan di jalur sepeda."
+Buat objek dari kedua kelas dan panggil method jalan().
+📌Output yang diharapkan:
+Mobil berjalan di jalan raya.
+Sepeda berjalan di jalur sepeda.
