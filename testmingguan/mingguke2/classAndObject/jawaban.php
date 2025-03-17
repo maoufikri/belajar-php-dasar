@@ -5,11 +5,11 @@ class personn {
    public $age;
    
    function tampilName($name) {
-      echo $this->name = $name;
+      echo $this->name = $name . "\n";
    }
 }
 $Gaby = new personn();
-$Gaby->tampilName("Gaby") . "\n";
+$Gaby->tampilName("Gaby");
 
 // 2
 class Carr {

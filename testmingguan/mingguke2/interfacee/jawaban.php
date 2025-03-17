@@ -31,3 +31,26 @@ $luassegitiga = new segitiga();
 $luassegitiga->tinggi = 20;
 $luassegitiga->alas = 40;
 echo $luassegitiga->hitungLuas() . "\n";
+
+// 2
+interface Kendaraann {
+    function jalan();
+}
+
+class mobill implements kendaraann{
+    function jalan()
+    {
+        echo "Mobil berjalan di jalan raya" . "\n";
+    }
+}
+class sepeda implements kendaraann{
+    function jalan()
+    {
+        echo "sepada berjalan di jalur sepeda";
+    }
+}
+
+$mobil = new mobill();
+$mobil->jalan();
+$sepeda = new sepeda();
+$sepeda->jalan();

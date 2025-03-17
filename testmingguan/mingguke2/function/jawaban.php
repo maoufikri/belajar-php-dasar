@@ -21,9 +21,9 @@ function faktorial(int $n) {
     } else {
         return $n * faktorial($n - 1);
     }
+
 }
 echo faktorial(5) . "\n";
-
 // 4
 function tertinggi(int $a,int $b) {
     if ($a > $b) {
@@ -36,13 +36,13 @@ echo tertinggi(5, 7) . "\n";
 
 // 5
 function pembagian(int $a ,int $b) {
-    if ($a === 0 || $b === 0){
+    if ($b === 0){
         return "INFINITY CUYY/ NOT DEFINED";
     } else {
         return $a / $b;
     }
 }
-echo pembagian(10, 2) . "\n";
+echo pembagian(0, 10) . "\n";
 
 // 6
 function sameCharacter(string $a) {

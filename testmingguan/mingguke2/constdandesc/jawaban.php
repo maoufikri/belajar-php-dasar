@@ -43,7 +43,7 @@ class DatabaseConnection{
     }
 }
 $data = new DatabaseConnection();
-unset($data);
+// unset($data);
 // 4
 class apaKek{
     public $free;
