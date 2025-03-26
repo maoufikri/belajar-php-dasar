@@ -87,6 +87,7 @@ Ket : KKM = 75.
 
 8. Buatlah mekanisme enkripsi dan deskripsinya gunakan saja metode yang sederhana seperti
 “A = B” atau “M =N”.
+
 9. Buat program PHP untuk mencetak pola segitiga bilangan terbalik seperti ini:
 Input: n = 5
 Output:
