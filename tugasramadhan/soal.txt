@@ -1,0 +1,152 @@
+1. Terdapat Class Mahasiswa yang menampung atribut yang di dalamnya nama, nim, nilai, dan
+jurusan .
+Buatlah method logic untuk mensortir mengurutkan berdasarkan dari nilai yang terbesar ke
+yang terkecil, kemudian berdasarkan nama
+- Gunakan metode usort untuk mengurutkan data mahasiswa.
+- Buatlah sebuah fungsi callback yang dapat mengurutkan data mahasiswa berdasarkan
+nilai, kemudian berdasarkan nama.
+- Pastikan Anda mempertimbangkan kasus-kasus seperti nilai yang sama, nama yang sama,
+dan lain-lain.
+
+2. Casting dari array berikut:
+$orang = [
+[
+'nama' => 'John Doe',
+'umur' => '25 tahun',
+'jenis_kelamin' => 'L'
+],
+[
+'nama' => 'Jane Doe',
+'umur' => '30 tahun',
+'jenis_kelamin' => 'P'
+],
+[
+'nama' => 'Bob Smith',
+'umur' => '20 tahun',
+'jenis_kelamin' => 'L'
+]
+];
+buatlah sebuah fungsi yang dapat mengubah data orang tersebut menjadi sebuah array yang
+berisi data orang dengan umur yang sudah diubah menjadi angka (integer) dan jenis kelamin
+yang sudah diubah menjadi singkatan (L/P menjadi Laki-laki/Perempuan).
+
+3. Buatkan fitur perpustakaan yang di dalamnya bisa:
+- menambahkan buku dengan keterangan judul, penulis, dan tahun terbit
+- Dapat melihat daftar buku .
+Fitur:
+- Tersambung ke database.
+- Tambah buku.
+- Daftar buku.
+- Dapat di searching
+
+4. Quinque elementorum, buatlah kertas, dengan elemen seperti ini:
+game quinque elementorum ini seperti game batu, gunting,
+Elemen Menang Kalah
+Api Es, Angin Air, Tanah
+Air Api, Tanah Angin, Es
+Tanah Api, Angin Air, Es
+Angin Air, Es Api, Tanah
+Es Air, Tanah Api, Angin
+Perhatikan apabila dua elemen bertemu maka hasilnya akan seri, contoh : angin vs angin =
+seri.
+
+5. Buatlah quiz menggunakan PHP, gunakan CLI (antarmuka terminal) saja apabila kamu tidak
+bisa membuatnya di web, contoh:
+- pertanyaan :
+1. Di mana Ibukota Indonesia? Jakarta.
+Kamu bisa menggunakan opsi pilihan ganda jika mau, jadi output nya seperti ini :
+“ Dimanah Ibukota Indonesia?
+a. IKN b. Jakarta
+c. Aceh d. Papua?
+Jawaban : b
+
+6. Buatlah fungsi yang mengembalikan string menjadi “Capital sentence Only” atau hanya
+kapital pada awal katanya saja, contoh :
+Input Output
+DAUN YANG JATUH TAK AKAN MENYALAHKAN
+ANGIN
+Daun yang Jatuh Tak Akan Menyalahkan Angin
+laut bercerita Laut Bercerita
+NeGeRi AntAH BerAntAH Negeri Antah Berantah
+Pastikan kata hubung dan kata sambung kecil ya...
+
+7. Pak Guru ingin menilai anak muridnya, akan tetapi karena anak muridnya ada banyak dia
+mencoba untuk membuat suatu program agar dia bisa bekerja dengan lebih cepat, berikut
+kriterianya :
+Nilai Output
+100 Sempurna
+98-90 Sangat Bagus
+89-80 Bagus
+79-70 Lumayan
+69-50 Belajar Lagi (Remidi)
+59-0 Ulangi Lagi pelajarannya 10x (Remidi)
+Pastikan program tadi agar tidak menghasilkan output apabila nilai siswa lebih dari
+seratus atau kurang dari nol (minus), jangan lupa berikan lampiran juga berapa orang yang
+remidi dan berapa orang yang lulus serta siapa saja yang dibawah KKM walaupun tidak remidi.
+Ket : KKM = 75.
+
+8. Buatlah mekanisme enkripsi dan deskripsinya gunakan saja metode yang sederhana seperti
+“A = B” atau “M =N”.
+9. Buat program PHP untuk mencetak pola segitiga bilangan terbalik seperti ini:
+Input: n = 5
+Output:
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+Petunjuk:
+- Gunakan looping bersarang (`for` atau `while`).
+- Logika perulangan untuk membalik angka.
+
+10. Buatlah sistem management berbasis OOP di PHP dengan 3 level pengguna:
+pengguna kemampuan
+• User Mengunggah pesan
+• Moderator (turunan dari User ) mengunggah pesan, menghapus pesan
+• Admin (turunan dari Moderator) mengunggah, menghapus dan
+menyematkan pesan
+Setiap perlakuan/aksi terdeteksi di Log yang menyimpan timestamp, jenis pengguna,
+Username, dan Deskripsi Aksi, Log harus di urutkan dari yang terbaru sampai dengan yang
+terlama gunakan kelas Logger dengan metode static untuk logging, dan pastikan User tidak
+menjalankan aksi yang tidak diizinkan (misal: Menghapus pesan) , fokus pada struktur kelas,
+dan pewarisan
+
+11. Buat program untuk menghitung jumlah bilangan prima dalam rentang tertentu.
+Input: 10 - 30
+Output: 11, 13, 17, 19, 23, 29 (Total: 6)
+Petunjuk:
+- Buat fungsi `isPrime()` untuk memeriksa bilangan prima.
+- Gunakan perulangan untuk menghitung jumlah bilangan prima dalam rentang tersebut.
+
+12. Buat Class untuk Menghitung Luas Bangun Datar
+Buat class `BangunDatar` dengan method untuk menghitung luas persegi dan lingkaran.
+Input:
+- Persegi dengan sisi = 5
+- Lingkaran dengan jari-jari = 7
+Petunjuk:
+- Gunakan konsep OOP (class, method, dan inheritance).
+- Gunakan polymorphism untuk membuat metode yang sama dengan hasil berbeda.
+
+13. Buat Interface untuk Menghitung Volume
+Buat interface `BangunRuang` dengan method `hitungVolume()` dan implementasikan ke
+class `Kubus` dan `Bola`.
+Petunjuk:
+- Gunakan konsep interface.
+- Gunakan metode `pow()` untuk menghitung pangkat.
+
+14. Buat fungsi rekursif untuk menghitung faktorial dari sebuah angka.
+Input: 5
+Output: 120 (karena 5! = 5 * 4 * 3 * 2 * 1)
+Petunjuk:
+- Gunakan konsep rekursi.
+
+15. Buat program untuk menampilkan deret Fibonacci hingga nilai tertentu.
+Input: 10
+Output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+NB:
+- Pastikan untuk dikerjakan sebelum deadline.
+- Dilarang menggunakan ChatGPT atau tool AI sejenis untuk langsung menghasilkan jawaban
+dari soal.
+- Dilarang menggunakan fungsi built-in (bawan) dari PHP kecuali diperbolehkan oleh soal
+terkait.
