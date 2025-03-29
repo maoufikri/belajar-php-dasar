@@ -43,68 +43,38 @@ function bandingkanString($a, $b) {
     return ($lenA < $lenB) ? -1 : ($lenA > $lenB ? 1 : 0);
 }
 
-function sortByNama(&$arr) {
-    $n = count($arr);
-    for ($i = 0; $i < $n - 1; $i++) {
-        for ($j = 0; $j < $n - $i - 1; $j++) {
-            if (bandingkanString($arr[$j]->nama, $arr[$j + 1]->nama) > 0) {
-                $temp = $arr[$j];
-                $arr[$j] = $arr[$j + 1];
-                $arr[$j + 1] = $temp;
-            }
-        }
-    }
-}
-
-function sortByNilai(&$arr) {
-    $n = count($arr);
-    for ($i = 0; $i < $n - 1; $i++) {
-        for ($j = 0; $j < $n - $i - 1; $j++) {
-            if ($arr[$j]->nilai < $arr[$j + 1]->nilai) {
-                $temp = $arr[$j];
-                $arr[$j] = $arr[$j + 1];
-                $arr[$j + 1] = $temp;
-            }
-        }
-    }
-}
-
-function sortByNilaiNama(&$arr) {
-    $n = count($arr);
-    for ($i = 0; $i < $n - 1; $i++) {
-        for ($j = 0; $j < $n - $i - 1; $j++) {
-            if ($arr[$j]->nilai < $arr[$j + 1]->nilai) {
-                // Tukar jika nilai lebih kecil
-                $temp = $arr[$j];
-                $arr[$j] = $arr[$j + 1];
-                $arr[$j + 1] = $temp;
-            } elseif ($arr[$j]->nilai == $arr[$j + 1]->nilai) {
-                // Jika nilai sama, cek nama
-                if (bandingkanString($arr[$j]->nama, $arr[$j + 1]->nama) > 0) {
-                    $temp = $arr[$j];
-                    $arr[$j] = $arr[$j + 1];
-                    $arr[$j + 1] = $temp;
-                }
-            }
-        }
-    }
-}
-
-function printMahasiswa($mahasiswa) {
-    foreach ($mahasiswa as $mhs) {
-        echo "{$mhs->nama} - {$mhs->nim} - {$mhs->nilai} - {$mhs->jurusan}\n";
-    }
-}
+// Sort by Nama (Ascending)
+usort($mahasiswa, function ($a, $b) {
+    return bandingkanString($a->nama, $b->nama);
+});
 
 echo "Urut berdasarkan Nama:\n";
-sortByNama($mahasiswa);
-printMahasiswa($mahasiswa);
+foreach ($mahasiswa as $mhs) {
+    echo "{$mhs->nama} - {$mhs->nim} - {$mhs->nilai} - {$mhs->jurusan}\n";
+}
+
+// Sort by Nilai (Descending)
+usort($mahasiswa, function ($a, $b) {
+    return ($a->nilai > $b->nilai) ? -1 : (($a->nilai < $b->nilai) ? 1 : 0);
+});
 
 echo "Urut berdasarkan Nilai:\n";
-sortByNilai($mahasiswa);
-printMahasiswa($mahasiswa);
+foreach ($mahasiswa as $mhs) {
+    echo "{$mhs->nama} - {$mhs->nim} - {$mhs->nilai} - {$mhs->jurusan}\n";
+}
+
+// Sort by Nilai (Descending), lalu Nama (Ascending)
+usort($mahasiswa, function ($a, $b) {
+    if ($a->nilai > $b->nilai) {
+        return -1;
+    } elseif ($a->nilai < $b->nilai) {
+        return 1;
+    }
+    return bandingkanString($a->nama, $b->nama);
+});
 
 echo "Urut berdasarkan Nilai lalu Nama:\n";
-sortByNilaiNama($mahasiswa);
-printMahasiswa($mahasiswa);
+foreach ($mahasiswa as $mhs) {
+    echo "{$mhs->nama} - {$mhs->nim} - {$mhs->nilai} - {$mhs->jurusan}\n";
+}
 ?>
